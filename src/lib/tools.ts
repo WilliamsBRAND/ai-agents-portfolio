@@ -1,0 +1,18 @@
+export const toolLogos: Record<string, string | null> = {
+  Airtable: "/logos/airtable.svg",
+  "Claude Code": "/logos/claude.svg",
+  ElevenLabs: "/logos/elevenlabs.svg",
+  GitHub: "/logos/github.svg",
+  GoHighLevel: "/logos/gohighlevel.svg",
+  "Google Sheets": "/logos/googlesheets.svg",
+  "Meta Ads Manager": "/logos/meta.svg",
+  n8n: "/logos/n8n.svg",
+  "Next.js": "/logos/nextdotjs.svg",
+  OpenAI: "/logos/openai.svg",
+  Recharts: "/logos/recharts.svg",
+  Stripe: "/logos/stripe.svg",
+  Supabase: "/logos/supabase.svg",
+  Tavily: null,
+  Telegram: "/logos/telegram.svg",
+  Vercel: "/logos/vercel.svg",
+};
