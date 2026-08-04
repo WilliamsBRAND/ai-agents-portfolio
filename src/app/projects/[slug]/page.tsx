@@ -7,7 +7,7 @@ import {
   Check,
   PlayCircle,
 } from "@phosphor-icons/react/dist/ssr";
-import { projects, getProject, getYouTubeVideoId } from "@/lib/projects";
+import { projects, getProject, getVideoEmbed } from "@/lib/projects";
 import visuals from "@/lib/project-visuals.json";
 import { toolLogos } from "@/lib/tools";
 import FadeIn from "@/components/FadeIn";
@@ -36,9 +36,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   const visual = visuals[slug as keyof typeof visuals] as string | undefined;
-  const videoId = project.videoUrl
-    ? getYouTubeVideoId(project.videoUrl)
-    : undefined;
+  const video = project.videoUrl ? getVideoEmbed(project.videoUrl) : undefined;
   const metricCols =
     project.impact.metrics.length === 4
       ? "sm:grid-cols-2 md:grid-cols-4"
@@ -82,13 +80,17 @@ export default async function ProjectPage({
         <FadeIn>
           <div
             className={`relative overflow-hidden rounded-2xl border bg-surface-raised ${
-              videoId ? "border-accent" : "border-border-subtle"
+              video ? "border-accent" : "border-border-subtle"
             }`}
           >
-            {videoId ? (
+            {video ? (
               <div className="aspect-video w-full">
                 <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
+                  src={
+                    video.provider === "loom"
+                      ? `https://www.loom.com/embed/${video.id}`
+                      : `https://www.youtube.com/embed/${video.id}`
+                  }
                   title={`${project.title} walkthrough`}
                   className="h-full w-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -110,7 +112,7 @@ export default async function ProjectPage({
                 <p className="text-sm text-muted">Product visual</p>
               </div>
             )}
-            {!videoId && (
+            {!video && (
               <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3.5 py-1.5 text-xs text-foreground/90 backdrop-blur-sm">
                 <PlayCircle weight="light" className="h-4 w-4 text-accent-bright" />
                 Walkthrough video coming soon

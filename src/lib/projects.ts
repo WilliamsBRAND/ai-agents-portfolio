@@ -50,3 +50,21 @@ export function getYouTubeVideoId(url: string): string | null {
   );
   return match ? match[1] : null;
 }
+
+export function getLoomVideoId(url: string): string | null {
+  const match = url.match(/loom\.com\/share\/([\w-]+)/);
+  return match ? match[1] : null;
+}
+
+export interface VideoEmbed {
+  provider: "youtube" | "loom";
+  id: string;
+}
+
+export function getVideoEmbed(url: string): VideoEmbed | null {
+  const loomId = getLoomVideoId(url);
+  if (loomId) return { provider: "loom", id: loomId };
+  const youtubeId = getYouTubeVideoId(url);
+  if (youtubeId) return { provider: "youtube", id: youtubeId };
+  return null;
+}
