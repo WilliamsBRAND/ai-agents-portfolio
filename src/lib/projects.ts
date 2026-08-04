@@ -17,11 +17,11 @@ export interface Project {
   client: string;
   category: string;
   shortDescription: string;
-  brief: string;
+  brief: string[];
   implementation: ImplementationStep[];
   before: string[];
   after: string[];
-  whyThisApproach: string;
+  whyThisApproach: string[];
   impact: Impact;
   tools: string[];
   keyFeatures: string[];

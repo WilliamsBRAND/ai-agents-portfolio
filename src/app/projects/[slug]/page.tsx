@@ -130,11 +130,13 @@ export default async function ProjectPage({
             <span className="absolute inset-y-0 left-0 w-1 bg-accent" />
             <div className="px-7 py-8 md:px-10 md:py-10">
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                From the client
+                The problem
               </p>
-              <p className="mt-5 text-lg leading-relaxed text-foreground md:text-xl">
-                {project.brief}
-              </p>
+              <div className="mt-5 space-y-4 text-lg leading-relaxed text-foreground md:text-xl">
+                {project.brief.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
               <div className="mt-8 flex items-center gap-3 border-t border-border-subtle pt-5">
                 <span className="h-px w-8 bg-accent-bright" />
                 <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted">
@@ -247,9 +249,11 @@ export default async function ProjectPage({
           <Chapter index="04" label="Why this approach" />
         </FadeIn>
         <FadeIn delay={0.05}>
-          <p className="mt-8 border-l-2 border-accent-bright pl-6 text-lg leading-relaxed text-foreground md:text-xl md:leading-relaxed">
-            {project.whyThisApproach}
-          </p>
+          <div className="mt-8 space-y-4 border-l-2 border-accent-bright pl-6 text-lg leading-relaxed text-foreground md:text-xl md:leading-relaxed">
+            {project.whyThisApproach.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
         </FadeIn>
       </section>
 
