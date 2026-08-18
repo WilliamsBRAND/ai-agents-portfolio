@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <pattern id="grid-websites-built-with-claude-code" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="glow-websites-built-with-claude-code" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A0A15" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="#050505"/>
+  <rect width="1000" height="1000" fill="url(#grid-websites-built-with-claude-code)"/>
+  <circle cx="500" cy="500" r="400" fill="url(#glow-websites-built-with-claude-code)"/>
+  <rect x="200" y="250" width="600" height="500" rx="20" stroke="#7A0A15" stroke-width="6" fill="none"/><path d="M200 350 L800 350" stroke="#7A0A15" stroke-width="6"/><circle cx="250" cy="300" r="10" fill="rgba(255,255,255,0.2)"/><circle cx="290" cy="300" r="10" fill="rgba(255,255,255,0.2)"/><circle cx="330" cy="300" r="10" fill="rgba(255,255,255,0.2)"/>
+</svg>

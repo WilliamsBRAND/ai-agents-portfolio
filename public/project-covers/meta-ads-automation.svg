@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <pattern id="grid-meta-ads-automation" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="glow-meta-ads-automation" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A0A15" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="#050505"/>
+  <rect width="1000" height="1000" fill="url(#grid-meta-ads-automation)"/>
+  <circle cx="500" cy="500" r="400" fill="url(#glow-meta-ads-automation)"/>
+  <path d="M300 500 C 300 300, 700 300, 700 500 C 700 700, 300 700, 300 500" stroke="#7A0A15" stroke-width="12" fill="none"/><path d="M400 500 C 400 400, 600 400, 600 500 C 600 600, 400 600, 400 500" stroke="#ffffff" stroke-width="6" fill="none"/>
+</svg>

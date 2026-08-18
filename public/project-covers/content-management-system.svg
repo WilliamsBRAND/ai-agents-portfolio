@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <pattern id="grid-content-management-system" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="glow-content-management-system" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A0A15" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="#050505"/>
+  <rect width="1000" height="1000" fill="url(#grid-content-management-system)"/>
+  <circle cx="500" cy="500" r="400" fill="url(#glow-content-management-system)"/>
+  <rect x="250" y="250" width="500" height="500" rx="30" stroke="#7A0A15" stroke-width="8" fill="none"/><rect x="350" y="350" width="300" height="60" rx="10" fill="rgba(255,255,255,0.1)"/><rect x="350" y="450" width="200" height="40" rx="10" fill="rgba(255,255,255,0.1)"/><rect x="350" y="530" width="250" height="40" rx="10" fill="rgba(255,255,255,0.1)"/>
+</svg>

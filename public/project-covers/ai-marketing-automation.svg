@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <pattern id="grid-ai-marketing-automation" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="glow-ai-marketing-automation" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A0A15" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="#050505"/>
+  <rect width="1000" height="1000" fill="url(#grid-ai-marketing-automation)"/>
+  <circle cx="500" cy="500" r="400" fill="url(#glow-ai-marketing-automation)"/>
+  <path d="M200 600 Q500 200 800 600" stroke="#7A0A15" stroke-width="6" fill="none"/><path d="M800 600 L750 550 M800 600 L750 650" stroke="#7A0A15" stroke-width="6" stroke-linecap="round"/><circle cx="200" cy="600" r="30" fill="#ffffff" opacity="0.2"/><circle cx="500" cy="400" r="20" fill="#7A0A15"/>
+</svg>
