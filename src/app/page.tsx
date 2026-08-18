@@ -13,7 +13,7 @@ import Faq from "@/components/Faq";
 import FadeIn from "@/components/FadeIn";
 
 const heroHeadline =
-  "AI that answers, sells, and follows up, so you don\u2019t have to";
+  "Marketing Automations and AI Agents for Your Business";
 
 export default function Home() {
   return (
@@ -49,11 +49,13 @@ export default function Home() {
         {/* Video frame */}
         <FadeIn delay={0.12} className="mt-16">
           <div className="rounded-2xl border border-border-subtle bg-[rgb(20,8,10)] p-1.5 transition-colors duration-300 hover:border-white/15">
-            <div className="flex aspect-[21/9] items-center justify-center rounded-xl bg-surface-raised">
-              <div className="flex flex-col items-center gap-3 text-muted">
-                <PlayCircle weight="light" className="h-14 w-14" />
-                <p className="text-sm">Intro walkthrough coming soon</p>
-              </div>
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-surface-raised">
+              <iframe
+                src="https://www.loom.com/embed/b840c6796aff421482008263213c5741"
+                frameBorder="0"
+                allowFullScreen
+                className="absolute top-0 left-0 h-full w-full"
+              ></iframe>
             </div>
           </div>
         </FadeIn>

@@ -18,12 +18,24 @@
         "value": "400%"
       },
       {
+        "label": "App Downloads Growth",
+        "value": "5x"
+      },
+      {
+        "label": "High Ticket Event Attendees",
+        "value": "0 to 100+"
+      },
+      {
         "label": "Customers Grown From Zero",
         "value": "0 to 100+"
       },
       {
         "label": "B2B Client Database Built",
         "value": "10,000+"
+      },
+      {
+        "label": "Countries Worked Across",
+        "value": "5+"
       },
       {
         "label": "AI Systems Built",
@@ -1074,6 +1086,192 @@
         "Scales cleanly to any number of future product launches."
       ],
       "videoUrl": "https://www.loom.com/share/8f0732c319484534a2986df218535302"
+    },
+    {
+      "slug": "blossom-fast-lane-chatbot",
+      "title": "Fast Lane Launch Chatbot",
+      "client": "Blossom Affia",
+      "category": "Lead Conversion System",
+      "shortDescription": "A chatbot built for the Fast Lane product launch that drove 350 signups and ₦2 million in revenue within a week.",
+      "brief": [
+        "Blossom Affia needed a way to qualify and convert leads automatically for the Fast Lane product launch without manual follow-up.",
+        "We needed to capture interest, answer questions, and drive direct sales immediately upon launch."
+      ],
+      "implementation": [
+        {
+          "title": "Build the Chatbot",
+          "detail": "Designed and deployed an automated chatbot to handle lead qualification and inquiries in real-time."
+        },
+        {
+          "title": "Launch Integration",
+          "detail": "Integrated the chatbot into the product launch funnel to capture signups and process payments."
+        }
+      ],
+      "before": [
+        "Product launches typically required heavy manual follow-up to answer questions and qualify leads.",
+        "Sales were often lost due to delayed responses during high-traffic launch windows."
+      ],
+      "after": [
+        "The chatbot handled inquiries instantly, capturing 350 signups and driving ₦1 million on launch day alone.",
+        "Within a week, the system generated ₦2 million in revenue with minimal manual intervention."
+      ],
+      "whyThisApproach": [
+        "An automated chatbot ensures that every lead receives an immediate response, maximizing conversion during the critical launch window."
+      ],
+      "impact": {
+        "headline": "Drove 350 signups and ₦2 million in revenue within the first week of launch.",
+        "metrics": [
+          {
+            "label": "Total Signups",
+            "value": "350"
+          },
+          {
+            "label": "Launch Day Revenue",
+            "value": "₦1M"
+          },
+          {
+            "label": "First Week Revenue",
+            "value": "₦2M"
+          }
+        ],
+        "benefits": [
+          "Instant lead qualification and response.",
+          "High conversion rate during the launch window.",
+          "Significant revenue generated with zero manual follow-up."
+        ]
+      },
+      "tools": [
+        "GoHighLevel",
+        "n8n"
+      ],
+      "keyFeatures": [
+        "Automated lead capture and qualification.",
+        "Real-time responses to product inquiries.",
+        "Seamless integration with the launch funnel."
+      ],
+      "videoUrl": ""
+    },
+    {
+      "slug": "market-research-automation",
+      "title": "Automated Market Research",
+      "client": "Tomide Williams",
+      "category": "Operations Intelligence System",
+      "shortDescription": "Automated market research and Google Workspace integration using Codex.",
+      "brief": [
+        "Market research is incredibly time-consuming but essential for creating targeted campaigns and product positioning.",
+        "I needed a system to automatically gather, synthesize, and format market research into Google Workspace without manual data entry."
+      ],
+      "implementation": [
+        {
+          "title": "Data Aggregation",
+          "detail": "Built automated workflows to pull market data and competitor insights."
+        },
+        {
+          "title": "Workspace Integration",
+          "detail": "Connected Codex to Google Workspace to automatically draft research reports in Docs and Sheets."
+        }
+      ],
+      "before": [
+        "Hours were spent manually searching for market data and formatting it into reports.",
+        "Insights were often siloed or outdated by the time they were compiled."
+      ],
+      "after": [
+        "Comprehensive market research reports are generated automatically and saved directly to Google Drive.",
+        "Data is always current and readily available for campaign planning."
+      ],
+      "whyThisApproach": [
+        "Automating the research phase frees up time for strategic decision-making rather than data entry."
+      ],
+      "impact": {
+        "headline": "Eliminated manual market research, automatically generating reports directly into Google Workspace.",
+        "metrics": [
+          {
+            "label": "Research Automation",
+            "value": "100%"
+          },
+          {
+            "label": "Manual Data Entry",
+            "value": "Eliminated"
+          }
+        ],
+        "benefits": [
+          "Instant access to comprehensive market data.",
+          "Reports formatted and ready in Google Docs.",
+          "More time spent on strategy instead of research."
+        ]
+      },
+      "tools": [
+        "Codex",
+        "Google Workspace",
+        "n8n"
+      ],
+      "keyFeatures": [
+        "Automated data extraction and synthesis.",
+        "Direct integration with Google Docs and Sheets.",
+        "Customizable research parameters."
+      ],
+      "videoUrl": "https://www.loom.com/share/686cce19efda47ebb3ce6677db86c22b"
+    },
+    {
+      "slug": "meta-ads-automation",
+      "title": "Meta Ads Automation",
+      "client": "Tomide Williams",
+      "category": "Marketing Automation System",
+      "shortDescription": "A custom Meta Ads MCP server that automates ad management, driving a 45x ROAS.",
+      "brief": [
+        "Managing Meta Ads requires constant monitoring, adjusting budgets, and analyzing performance data.",
+        "I wanted to connect Claude Code directly to Meta Ads via an MCP server to manage campaigns autonomously."
+      ],
+      "implementation": [
+        {
+          "title": "MCP Server Build",
+          "detail": "Developed a custom MCP server to interact with the Meta Ads API."
+        },
+        {
+          "title": "Automated Optimization",
+          "detail": "Created workflows for Claude Code to analyze performance and adjust bids and budgets."
+        }
+      ],
+      "before": [
+        "Campaigns required manual daily check-ins to prevent wasted spend.",
+        "Optimization was slow and prone to human error."
+      ],
+      "after": [
+        "The MCP server enables Claude Code to monitor and optimize ads in real-time, resulting in a 45x ROAS.",
+        "Campaign management is hands-free, with automated reporting and adjustments."
+      ],
+      "whyThisApproach": [
+        "Direct API access via MCP allows an LLM to manage ad campaigns with far greater speed and precision than manual adjustments."
+      ],
+      "impact": {
+        "headline": "Achieved a 45x ROAS through fully automated Meta Ads management via a custom MCP server.",
+        "metrics": [
+          {
+            "label": "ROAS",
+            "value": "45x"
+          },
+          {
+            "label": "Manual Management",
+            "value": "Eliminated"
+          }
+        ],
+        "benefits": [
+          "Real-time campaign optimization.",
+          "Massive return on ad spend.",
+          "Hands-free ad management."
+        ]
+      },
+      "tools": [
+        "Claude Code",
+        "Meta Ads",
+        "MCP"
+      ],
+      "keyFeatures": [
+        "Custom Meta Ads MCP server.",
+        "Automated bid and budget adjustments.",
+        "Real-time performance analysis and reporting."
+      ],
+      "videoUrl": "https://www.loom.com/share/b840c6796aff421482008263213c5741"
     }
   ]
 }
