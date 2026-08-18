@@ -36,16 +36,14 @@ export default function Footer() {
               Use cases
             </h4>
             <ul className="mt-4 space-y-2">
-              {projects.map((project) => (
-                <li key={project.slug}>
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className="text-sm text-foreground transition-colors hover:text-accent-bright"
-                  >
-                    {project.title}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/projects"
+                  className="text-sm text-foreground transition-colors hover:text-accent-bright"
+                >
+                  Projects
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
