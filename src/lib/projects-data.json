@@ -55,1223 +55,452 @@
   },
   "projects": [
     {
-      "slug": "personal-ai-assistant",
-      "title": "Personal AI Assistant",
-      "client": "Tomide Williams (personal system)",
-      "category": "Operations Intelligence System",
-      "shortDescription": "A Claude Code powered executive assistant that runs Tomide's entire operation, email, calendar, docs, projects, and decisions, from one command line.",
+      "slug": "ai-sales-agents",
+      "title": "AI Sales Agents",
+      "client": "Standard Deployment",
+      "category": "AI Sales Agents",
+      "shortDescription": "Qualify leads, follow up, update your CRM, and keep deals moving, without a single lead going cold because someone was busy.",
       "brief": [
-        "I run consulting, coaching, a job search, and several side projects at the same time, and I was losing real hours every week just switching between Gmail, Docs, Sheets, Calendar, and a dozen other tools to keep track of it all.",
-        "Every task started from the same blank page. I had to re-explain who I am, what I'm working on right now, and how I like things done, before any actual work could begin.",
-        "None of the individual tools were the problem. The problem was that no single system held the whole picture: my active projects, my priorities, my writing voice, and the specific rules I follow for things like keeping outbound email out of Gmail Promotions.",
-        "I needed an assistant that behaves like a real second brain, one that remembers everything between sessions and can actually act on my real systems, not just describe what I should go do."
+        "Sales teams lose momentum when they have to chase unqualified leads or manually log every touchpoint into a CRM.",
+        "Every minute spent on manual follow-up or data entry is a minute taken away from closing deals.",
+        "We needed a way to automate the top of the funnel so human reps only step in when a prospect is ready to talk."
       ],
       "implementation": [
         {
-          "title": "Give it memory",
-          "detail": "Built a persistent context system in Claude Code, project files for goals, priorities, active work, and a decision log, so every session starts with the full picture instead of a blank page."
+          "title": "Automated Lead Qualification",
+          "detail": "Deployed an AI agent to instantly engage inbound leads, ask qualifying questions, and score them based on fit."
         },
         {
-          "title": "Connect it to real work",
-          "detail": "Wired up a Google Workspace CLI for direct Gmail, Docs, Sheets, Calendar, and Drive access, plus MCP servers for ClickUp, Slack, GoHighLevel, and n8n, so the assistant can actually act, not just talk."
+          "title": "Persistent Follow-Up",
+          "detail": "Set up autonomous follow-up sequences across email and SMS that adapt based on prospect engagement."
         },
         {
-          "title": "Encode the rules that matter",
-          "detail": "Hard-coded the rules that keep outbound email out of Gmail Promotions, the Drive delivery format for every deliverable, and the brand and tone guidelines, so output is usable on the first try."
-        },
-        {
-          "title": "Build it as skills, not one-off prompts",
-          "detail": "Packaged recurring workflows (social content, proposals, brand voice, weekly reports) as reusable skills, so the system gets faster and more consistent the more it's used."
+          "title": "CRM Syncing",
+          "detail": "Integrated directly with the CRM to log all conversations, update lead statuses, and schedule follow-up tasks without manual data entry."
         }
       ],
       "before": [
-        "Every task started from zero: re-explaining who I am, what I'm working on, and how I like things done.",
-        "Context was scattered across Gmail, Docs, Sheets, and a dozen browser tabs, with no single place that knew the whole picture.",
-        "Repeated workflows, outreach emails, reports, proposals, were rebuilt from scratch every time instead of getting easier.",
-        "Switching between tools all day left less time for the consulting and coaching work that actually pays."
+        "Leads often went cold because sales reps were too busy to follow up instantly.",
+        "Hours were wasted manually updating the CRM after every interaction.",
+        "Reps spent most of their time talking to unqualified prospects instead of closing deals."
       ],
       "after": [
-        "One system holds the full context: active projects, priorities, decisions, and writing voice, ready at the start of every session.",
-        "It reads and writes directly into Gmail, Docs, Sheets, Calendar, and Drive, so work gets done, not just described.",
-        "Recurring workflows now run as reusable skills, each one faster and more consistent than the last time.",
-        "Hours that went into repetitive coordination now go into the client work and coaching that actually pays."
+        "Every inbound lead gets an instant, personalized response and qualification.",
+        "The CRM updates itself automatically based on the AI's conversations.",
+        "Human sales reps only talk to warm, qualified leads who are ready to buy."
       ],
       "whyThisApproach": [
-        "A general-purpose chatbot forgets everything the moment a session ends, which meant re-explaining the same context every single day.",
-        "Building this on Claude Code with persistent project files and direct tool access meant the assistant behaves like a real second brain. It remembers what matters, and it can act on live systems instead of only suggesting what to do next.",
-        "It also gets sharper over time. Every new rule, workflow, or piece of context that gets added makes the next session faster, not just this one."
+        "Speed to lead is the most critical factor in sales conversion.",
+        "An AI agent can respond in seconds, 24/7, ensuring no opportunity is missed while keeping the human touch for the final close."
       ],
       "impact": {
-        "headline": "One system now runs the coordination work that used to eat hours every week, across consulting, coaching, and every side project at once.",
+        "headline": "Zero leads dropped, instant qualification, and automated CRM hygiene.",
         "metrics": [
           {
-            "label": "Connected systems",
-            "value": "25+"
+            "label": "Speed to lead",
+            "value": "< 10 seconds"
           },
           {
-            "label": "Context",
-            "value": "Persistent across sessions"
-          },
-          {
-            "label": "Manual re-explaining",
-            "value": "Eliminated"
-          }
-        ],
-        "benefits": [
-          "No more re-explaining context at the start of every task.",
-          "Real actions on real systems, not just suggestions to copy and paste.",
-          "Recurring workflows get faster and more consistent the more they're used.",
-          "Less time on coordination, more time on billable client and coaching work.",
-          "One place that knows the whole business, instead of a dozen half-updated tools."
-        ]
-      },
-      "tools": [
-        "Claude Code",
-        "Google Workspace",
-        "n8n",
-        "GoHighLevel",
-        "ClickUp"
-      ],
-      "keyFeatures": [
-        "Persistent project memory across every session, no context lost.",
-        "Direct read and write access to Gmail, Docs, Sheets, Calendar, and Drive.",
-        "Reusable skills that make recurring workflows faster over time.",
-        "Hard-coded delivery rules so output is usable on the first try.",
-        "One system covering consulting, coaching, and every side project.",
-        "Scales to new tools and workflows without starting over."
-      ],
-      "videoUrl": "https://www.loom.com/share/b1e3ed3540594252af465e8887cc3d05"
-    },
-    {
-      "slug": "claude-code-mcp-servers",
-      "title": "Claude Code MCP Servers",
-      "client": "Tomide Williams (personal system)",
-      "category": "Operations Intelligence System",
-      "shortDescription": "A working demo of Claude Code connected to dozens of live tools at once through MCP, turned into a single command center for running a business.",
-      "brief": [
-        "Claude Code is powerful on its own, but most of the actual work in my business happens inside other tools: Gmail, GoHighLevel, ClickUp, Supabase, Figma, and a dozen more.",
-        "Every one of those tools lived in its own tab, with no way for Claude Code to reach into them directly. Anything it needed to know had to be copied in by hand, and anything it produced had to be copied back out.",
-        "I wanted to see what happens when Claude Code can reach all of those tools directly instead of me sitting in the middle, moving data back and forth."
-      ],
-      "implementation": [
-        {
-          "title": "Map the real toolset",
-          "detail": "Listed every tool actually used day to day: CRM, project management, databases, design, ad platforms, and communication tools."
-        },
-        {
-          "title": "Connect each one through MCP",
-          "detail": "Set up Model Context Protocol servers for each tool, giving Claude Code direct, permissioned access instead of manual exports and copy-paste."
-        },
-        {
-          "title": "Test real, multi-step tasks",
-          "detail": "Ran genuine workflows across tools, like pulling a lead from GoHighLevel, enriching it, and logging it in ClickUp, to prove the connections hold up under real use."
-        },
-        {
-          "title": "Document the pattern",
-          "detail": "Turned the working setup into a repeatable pattern so any new tool can be connected the same way in minutes, not hours."
-        }
-      ],
-      "before": [
-        "Every tool lived in its own tab, with no way for one to talk to another without manual work.",
-        "Moving information between systems meant exporting, copying, and re-entering the same data more than once.",
-        "Multi-step tasks that touched several tools took far longer than the actual thinking involved."
-      ],
-      "after": [
-        "Claude Code reaches every connected tool directly, reading and writing without manual handoffs.",
-        "Multi-step, multi-tool tasks that used to take many minutes of switching now run in a single request.",
-        "Adding a new tool to the setup is now a repeatable, documented process instead of a one-off project."
-      ],
-      "whyThisApproach": [
-        "Most AI tools are only as useful as the data you manually feed them. Claude Code was capable, but it was working blind to almost everything happening in the actual business.",
-        "Connecting it directly to the real tools through MCP removed that bottleneck. It now works with live data in the systems that actually run the business, instead of static exports that go stale the moment they're pulled.",
-        "That also made the setup reusable. Once one tool was connected, the pattern for connecting the next one was already proven."
-      ],
-      "impact": {
-        "headline": "Dozens of tools now work through one interface, cutting out the manual copy-paste that used to sit between almost every task.",
-        "metrics": [
-          {
-            "label": "Connected MCP servers",
-            "value": "25+"
-          },
-          {
-            "label": "Manual data transfer",
-            "value": "Removed"
-          },
-          {
-            "label": "New tool setup",
-            "value": "Minutes, not hours"
-          }
-        ],
-        "benefits": [
-          "One interface for tools that used to require constant tab-switching.",
-          "Multi-tool tasks run end to end instead of stalling at every handoff.",
-          "A repeatable pattern for connecting any new tool that comes along.",
-          "Live data instead of stale exports, so decisions use current information.",
-          "Less time spent moving information, more time spent using it."
-        ]
-      },
-      "tools": [
-        "Claude Code",
-        "n8n",
-        "Supabase",
-        "GoHighLevel",
-        "Figma"
-      ],
-      "keyFeatures": [
-        "Direct, permissioned access to dozens of business tools from one place.",
-        "Multi-step tasks that cross several systems run in a single request.",
-        "A documented, repeatable pattern for connecting any new tool.",
-        "No manual export or re-entry of data between systems.",
-        "Works with live data instead of periodic exports.",
-        "Scales to new tools without rebuilding the setup from scratch."
-      ],
-      "videoUrl": "https://www.loom.com/share/3abf04cab23740e69bda040319ac3d96"
-    },
-    {
-      "slug": "ai-marketing-automation",
-      "title": "AI Marketing Automation",
-      "client": "Tomide Williams (personal practice)",
-      "category": "Marketing Automation System",
-      "shortDescription": "A walkthrough of the actual AI agent workflows used to plan, write, and run marketing end to end, from content ideas to live, tracked campaigns.",
-      "brief": [
-        "Marketing work is full of small, repeatable tasks, competitor research, ad copy, content drafts, campaign reporting, and each one eats real time if it's done by hand.",
-        "Every campaign I ran started the same way: hours of manual research and drafting before a single piece of content or ad was ready to review.",
-        "I wanted to show exactly how AI agents built on Claude Code handle that work end to end, from an idea to a published, tracked campaign, using a real marketing calendar as the input."
-      ],
-      "implementation": [
-        {
-          "title": "Start from the real marketing calendar",
-          "detail": "Used an actual content and campaign calendar as the input, not a hypothetical, so every step maps to real deliverables."
-        },
-        {
-          "title": "Automate the repeatable parts",
-          "detail": "Built agent workflows for competitor research, ad copy variants, and content drafts, so the first version of everything shows up without a blank page."
-        },
-        {
-          "title": "Keep strategy and judgment human",
-          "detail": "Left targeting decisions, budget calls, and final approval with a person, using the agents to prepare options rather than make the call."
-        },
-        {
-          "title": "Track what actually worked",
-          "detail": "Connected campaign performance data back into the workflow, so the next round of content and ads starts from what the last round proved."
-        }
-      ],
-      "before": [
-        "Every campaign started with hours of manual research, drafting, and formatting before anything went live.",
-        "Content and ad copy variants were written one at a time, with no systematic way to test more than a couple of angles.",
-        "Reporting on what worked was a separate, manual step that often happened too late to inform the next campaign."
-      ],
-      "after": [
-        "Research, drafts, and ad copy variants are ready to review within minutes of a campaign brief, not hours.",
-        "Multiple angles get tested each time instead of one, because generating variants no longer costs extra hours.",
-        "Performance data feeds straight back into planning, so each campaign starts smarter than the last."
-      ],
-      "whyThisApproach": [
-        "The bottleneck in most marketing work was never the strategy. It was the volume of small, repetitive production tasks that had to happen around it before anything could go live.",
-        "Automating the research and the first-draft writing freed up time for the parts that actually need a marketer's judgment: what to say, who to say it to, and how much to spend.",
-        "It also meant more ideas got tested. Generating a second or third angle used to cost extra hours, so it rarely happened. Now it's the default."
-      ],
-      "impact": {
-        "headline": "The repetitive production work behind every campaign now runs through AI agents, leaving strategy and approval as the only manual steps.",
-        "metrics": [
-          {
-            "label": "Campaign prep time",
-            "value": "Hours down to minutes"
-          },
-          {
-            "label": "Content variants tested",
-            "value": "Multiple per campaign"
-          },
-          {
-            "label": "Manual drafting",
-            "value": "Removed from first pass"
-          }
-        ],
-        "benefits": [
-          "First-draft research and copy ready within minutes of a brief.",
-          "More angles tested per campaign without more hours spent.",
-          "Performance data feeds directly into the next round of planning.",
-          "Less time on production, more time on strategy and approval.",
-          "Consistent output even during weeks with less time to spare."
-        ]
-      },
-      "tools": [
-        "Claude Code",
-        "n8n",
-        "Meta Ads",
-        "OpenAI"
-      ],
-      "keyFeatures": [
-        "Automated competitor research and content drafting from a single brief.",
-        "Multiple ad copy and content variants generated for real testing.",
-        "Campaign performance data looped back into the next planning cycle.",
-        "Strategy, targeting, and budget decisions stay with a person.",
-        "Works from a real marketing calendar, not a hypothetical brief.",
-        "Cuts campaign prep from hours down to minutes."
-      ],
-      "videoUrl": "https://www.loom.com/share/78c7b561063e44f3ac7da57dddf04db7"
-    },
-    {
-      "slug": "google-workspace-cli-integration",
-      "title": "Google Workspace CLI Integration",
-      "client": "Tomide Williams (personal system)",
-      "category": "Operations Intelligence System",
-      "shortDescription": "A custom CLI that gives Claude Code full, direct control over Gmail, Docs, Sheets, Calendar, Drive, and Slides, no browser required.",
-      "brief": [
-        "I needed Claude Code to actually do things in Google Workspace: draft and send emails, build out Sheets, create Docs, manage my calendar, not just describe what I should go click on.",
-        "Google doesn't ship that kind of integration out of the box. Getting it right meant building a real bridge between Claude Code and the Workspace APIs, properly authenticated, that could be trusted with live data.",
-        "The scope was broad on purpose: Gmail, Calendar, Docs, Sheets, Drive, Slides, and Tasks all needed to be reachable, because splitting the work across a partial integration would have just moved the switching problem somewhere else.",
-        "Some of the harder operations, formatted Sheets, HTML-to-Google-Doc conversion, kept breaking through plain CLI flags, which meant finding a more direct, reliable pattern before this could be trusted for real work."
-      ],
-      "implementation": [
-        {
-          "title": "Build the CLI bridge",
-          "detail": "Built a command-line tool that talks directly to the Google Workspace APIs, so Claude Code can call it like any other terminal command."
-        },
-        {
-          "title": "Authenticate it properly",
-          "detail": "Set up OAuth against a dedicated Google Cloud project with the full scope list, Gmail, Calendar, Docs, Sheets, Drive, Slides, Tasks, and more, so every call is authorized and auditable."
-        },
-        {
-          "title": "Solve the tricky parts",
-          "detail": "Worked out the reliable pattern for complex API calls, like formatted Sheets or HTML-to-Google-Doc conversion, that plain CLI flags kept mangling, using direct REST calls with the OAuth token instead."
-        },
-        {
-          "title": "Put it to real use",
-          "detail": "Now runs day to day: pulling and replying to email, building and formatting Sheets, converting documents for Drive delivery, and managing calendar events, all from inside a Claude Code session."
-        }
-      ],
-      "before": [
-        "Getting anything done in Google Workspace meant switching out of Claude Code and into a browser, every single time.",
-        "There was no way for an AI assistant to actually act on Gmail, Docs, Sheets, or Calendar, only to describe what to do next.",
-        "Repetitive tasks, drafting a doc, formatting a sheet, checking a calendar, still needed a human to execute every step."
-      ],
-      "after": [
-        "Claude Code now reads and writes directly into Gmail, Docs, Sheets, Calendar, Drive, and Slides from the command line.",
-        "Complex operations, like fully formatted Sheets or Doc conversions, run reliably through a proven, direct API pattern.",
-        "Workspace tasks that used to require switching tools now finish inside the same session as everything else."
-      ],
-      "whyThisApproach": [
-        "An AI assistant that can only suggest actions in Google Workspace is only half useful. Someone still has to go and do the work by hand.",
-        "Building a proper authenticated CLI bridge meant Claude Code could execute directly against real Workspace data, closing the gap between being told what to do and it already being done.",
-        "Solving the harder API cases up front, rather than working around them each time, meant the integration could actually be relied on for daily work, not just simple lookups."
-      ],
-      "impact": {
-        "headline": "Full, direct control over Gmail, Docs, Sheets, Calendar, Drive, and Slides from inside a single Claude Code session, no browser switching required.",
-        "metrics": [
-          {
-            "label": "Workspace scopes connected",
-            "value": "27"
-          },
-          {
-            "label": "APIs enabled",
-            "value": "40+"
-          },
-          {
-            "label": "Browser switching for Workspace tasks",
-            "value": "Eliminated"
-          }
-        ],
-        "benefits": [
-          "Direct execution on Gmail, Docs, Sheets, Calendar, and Drive, not just suggestions.",
-          "A proven pattern for the complex API calls that usually break in a CLI.",
-          "Workspace tasks finish inside the same session as everything else.",
-          "No more switching out of Claude Code just to open a browser tab.",
-          "Trusted enough for daily use across email, documents, and scheduling."
-        ]
-      },
-      "tools": [
-        "Claude Code",
-        "Google Workspace",
-        "Google Cloud"
-      ],
-      "keyFeatures": [
-        "A custom CLI bridging Claude Code to the full Google Workspace API set.",
-        "Reliable handling of complex operations like formatted Sheets and Doc conversion.",
-        "27 authenticated scopes covering Gmail, Docs, Sheets, Calendar, Drive, and more.",
-        "Runs entirely from the command line, no browser required.",
-        "Built on a dedicated, properly authorized Google Cloud project.",
-        "Extendable to any additional Workspace API as new needs come up."
-      ],
-      "videoUrl": "https://www.loom.com/share/791333624608496b8386ee976fe8e081"
-    },
-    {
-      "slug": "ghl-stripe-payment-automation",
-      "title": "GHL + Stripe Payment Automation",
-      "client": "Karl Mifsud Wealth",
-      "category": "Operations Intelligence System",
-      "shortDescription": "A complete payment operations system built to manage agreements, activation fees, renewals, refunds, failed payments, and follow-ups without manual tracking.",
-      "brief": [
-        "Karl Mifsud Wealth needed a reliable system for managing the full payment lifecycle of its membership programme.",
-        "The offer involved several payment stages: a $497 strategy session, a $1,500 activation fee, and a $1,997 renewal charge twice a year. Each stage also came with agreements, payment confirmations, reminders, refunds, failed payments, and overdue renewals.",
-        "Without one connected system, the team would have to monitor payment dates, update member records, send reminders, and follow up on failed transactions manually. As the membership grew, this would become difficult to manage and make missed revenue more likely.",
-        "This project was a self-directed implementation based on a real Upwork brief. The goal was to design and build the complete system the business would need, not just a checkout page."
-      ],
-      "implementation": [
-        {
-          "title": "Map the complete member journey",
-          "detail": "Mapped every stage from the initial strategy session and signed agreement to activation, recurring renewals, refunds, failed payments, and overdue accounts."
-        },
-        {
-          "title": "Build workflows for every payment state",
-          "detail": "Created 15 GoHighLevel workflows to respond to each possible action or payment status, so members automatically receive the right communication at the right time."
-        },
-        {
-          "title": "Connect payments and agreements",
-          "detail": "Integrated Stripe for payment processing and added e-signature membership agreements directly to the website and funnel, keeping onboarding and payment in one connected journey."
-        },
-        {
-          "title": "Test the complete lifecycle",
-          "detail": "Tested the system from initial signup to renewal and dunning. Fourteen of the 15 workflows were completed and activated, creating an almost fully automated membership payment engine."
-        }
-      ],
-      "before": [
-        "The membership offer had several payment stages: a $497 strategy session, a $1,500 activation fee, and a $1,997 renewal charged twice a year.",
-        "Without automation, someone would need to manually track every member, confirm payments, monitor renewal dates, send reminders, process refunds, and follow up whenever a payment failed.",
-        "That may work with a few members, but it quickly becomes unreliable as the membership grows. One missed renewal or forgotten follow-up means revenue is delayed or lost."
-      ],
-      "after": [
-        "The entire payment journey is managed through one connected system.",
-        "When a member signs up, the appropriate agreement, payment, activation, reminder, renewal, refund, or failed-payment workflow is triggered automatically.",
-        "Stripe processes the payments, GoHighLevel manages the member journey, and automated dunning follows up on failed or overdue transactions.",
-        "The result is more than a payment page. It is a complete membership operations system designed to keep payments moving without someone constantly monitoring a spreadsheet."
-      ],
-      "whyThisApproach": [
-        "The main problem was not accepting payments. Stripe could already do that.",
-        "The real challenge was managing everything that happens before and after each payment: signed agreements, onboarding, activation, scheduled renewals, failed transactions, refunds, reminders, and member records.",
-        "That is why I built the project as a complete payment lifecycle rather than a single checkout flow. Each possible payment state has a defined response, reducing manual work and making it less likely that the business will lose revenue because someone forgot to follow up."
-      ],
-      "impact": {
-        "headline": "A complete payment lifecycle built for a membership offer ranging from $497 to recurring $1,997 renewals, with 14 of 15 workflows activated.",
-        "metrics": [
-          {
-            "label": "Automated workflows",
-            "value": "15"
-          },
-          {
-            "label": "Payment stages",
-            "value": "3"
-          },
-          {
-            "label": "Renewal charge",
-            "value": "$1,997 twice yearly"
-          }
-        ],
-        "benefits": [
-          "No manual tracking of payment and renewal dates.",
-          "Automatic follow-up for failed and overdue payments.",
-          "A consistent onboarding and payment experience for every member.",
-          "Better visibility across the complete membership lifecycle.",
-          "A system that can support more members without increasing administrative work."
-        ]
-      },
-      "tools": [
-        "GoHighLevel",
-        "Stripe"
-      ],
-      "keyFeatures": [
-        "Fifteen workflows covering signup, agreements, activation, renewals, refunds, failed payments, and overdue accounts.",
-        "E-signature membership agreements built directly into the website and funnel.",
-        "Stripe payment processing connected to GoHighLevel automation.",
-        "Automatic renewal reminders and dunning follow-ups.",
-        "Less administrative work and fewer opportunities for missed payments.",
-        "A scalable payment system that does not depend on someone manually monitoring every member."
-      ],
-      "videoUrl": "https://www.loom.com/share/b25dcabd3617428dbe3b5d02a6a62b29"
-    },
-    {
-      "slug": "learning-management-platform",
-      "title": "Learning Management Platform",
-      "client": "Blossom Affia",
-      "category": "Marketing Automation System",
-      "shortDescription": "A custom-built LMS for a content creator to host and sell her own courses directly to her audience, no platform fees.",
-      "brief": [
-        "I've built a real audience and I want to sell my own courses directly to them.",
-        "Renting space on a platform like Teachable or Kajabi means paying fees on every sale, forever, and I never really own my student data or the relationship that comes with it.",
-        "We need a platform that's mine, where students sign up, go through orientation, and learn, and where I keep full control of my content, my payments, and my students."
-      ],
-      "implementation": [
-        {
-          "title": "Design two experiences",
-          "detail": "Designed the student portal and the admin portal as separate experiences, each built for its own user from the ground up."
-        },
-        {
-          "title": "Build the platform",
-          "detail": "Coded it in Next.js with a Supabase backend, with its own authentication and a guided orientation flow for new students."
-        },
-        {
-          "title": "Deploy beside the brand",
-          "detail": "Launched it alongside her existing marketing website, so the whole experience reads as one brand rather than a rented storefront."
-        },
-        {
-          "title": "Hand over ownership",
-          "detail": "Delivered a platform she owns outright, with no per-seat fees and no dependency on a third-party template."
-        }
-      ],
-      "before": [
-        "Blossom Affia had built a real audience and wanted to sell her own courses directly to them.",
-        "The usual path, renting space on a platform like Teachable or Kajabi, meant ongoing fees on every sale, forever.",
-        "It also meant no real ownership of student data, or of the relationship that comes with it.",
-        "She was paying to rent the storefront, the customer list, and the experience itself."
-      ],
-      "after": [
-        "Her students now sign up and learn on a platform that is entirely hers, with her own signup, login, and orientation flow.",
-        "Course content is delivered through a dedicated student portal, and she manages everything from a separate admin dashboard.",
-        "She keeps full control of her student data, her payments, and how the experience looks and feels.",
-        "The platform sits beside her marketing website as one cohesive brand, not a rented template."
-      ],
-      "whyThisApproach": [
-        "Renting a platform meant paying indefinitely for something that could be owned outright, and it capped how much of the relationship she actually controlled.",
-        "Building it custom meant she keeps full control of her student data, her payments, and how the experience actually looks and feels, instead of being boxed into someone else's template.",
-        "For a creator whose audience is her business, ownership of that audience is the whole point."
-      ],
-      "impact": {
-        "headline": "Full ownership of the platform, the student data, and every payment, with platform fees eliminated.",
-        "metrics": [
-          {
-            "label": "Platform fees",
+            "label": "Manual CRM updates",
             "value": "Eliminated"
           },
           {
-            "label": "Portals",
-            "value": "2 (student + admin)"
-          },
-          {
-            "label": "Ownership",
-            "value": "100% hers"
+            "label": "Follow-up consistency",
+            "value": "100%"
           }
         ],
         "benefits": [
-          "No more platform fees eating into every sale.",
-          "Full ownership of student data and the relationship that comes with it.",
-          "A branded experience instead of a rented one.",
-          "Freedom to change the student experience without waiting on a platform vendor.",
-          "A foundation that can grow with the audience instead of taxing it."
+          "No more leads falling through the cracks.",
+          "Sales reps focus entirely on selling.",
+          "Accurate, real-time pipeline visibility."
         ]
       },
       "tools": [
         "Claude Code",
-        "Next.js",
-        "Supabase",
-        "Vercel"
-      ],
-      "keyFeatures": [
-        "Separate student and admin portals, each built for its own user.",
-        "A custom signup, login, and orientation flow.",
-        "Fully owned and self-hosted, with no per-seat platform fees.",
-        "Deployed alongside her existing marketing site as one cohesive brand.",
-        "Built on Next.js and Supabase for full control over the data layer.",
-        "Room to add new courses and features without a vendor's roadmap."
-      ],
-      "videoUrl": "https://www.loom.com/share/b31ea3560b794f2698b3ef5bdf10cb1c"
-    },
-    {
-      "slug": "websites-built-with-claude-code",
-      "title": "Websites Built With Claude Code",
-      "client": "Multiple brands (TW, Koppoh, Blossom Affia)",
-      "category": "Marketing Automation System",
-      "shortDescription": "A look at several production websites, personal brand, marketing, and course sites, built entirely with Claude Code instead of a page builder or agency.",
-      "brief": [
-        "Every brand I work with needs a real website, and paying an agency or renting a page builder for each one adds up fast, both in cost and in how much control you actually get over the result.",
-        "Templates rarely match a brand's real identity without expensive customization, and updating a site after launch usually means going back to whoever built it, or fighting a clunky page-builder interface.",
-        "I wanted to show what's possible building production sites directly with Claude Code: fast, fully owned, and matched exactly to the brand, across several very different projects."
-      ],
-      "implementation": [
-        {
-          "title": "Start from brand, not a template",
-          "detail": "Began each build from the brand's actual identity, colors, fonts, and voice, rather than picking a generic template and hoping it fit."
-        },
-        {
-          "title": "Build production code, not a page builder",
-          "detail": "Coded each site directly in HTML/CSS or Next.js, so there's no page-builder bloat, no monthly software fee, and full control over every detail."
-        },
-        {
-          "title": "Deploy properly",
-          "detail": "Shipped each site on Vercel with its own domain, so it loads fast and is genuinely production-ready, not a prototype."
-        },
-        {
-          "title": "Make it easy to keep current",
-          "detail": "Structured each site so content and sections can be updated directly through Claude Code, without needing a developer for every small change."
-        }
-      ],
-      "before": [
-        "Getting a real website meant hiring an agency or renting space on a page builder, with ongoing fees either way.",
-        "Off-the-shelf templates rarely matched a brand's actual identity without significant, expensive customization.",
-        "Updating a site after launch usually meant going back to whoever built it, or learning a clunky page-builder interface."
-      ],
-      "after": [
-        "Each site is coded from scratch to match its brand exactly, no template compromises.",
-        "There are no ongoing page-builder fees, the site is fully owned code, deployed on Vercel.",
-        "Updates and new sections can be made directly through Claude Code, without waiting on a developer."
-      ],
-      "whyThisApproach": [
-        "Page builders trade ownership and performance for convenience. Agencies trade cost and turnaround time for polish.",
-        "Building directly with Claude Code kept full ownership of the code and the brand, and cut out the recurring software fees that come with a page builder subscription.",
-        "It also meant a real, production-ready site could ship in days instead of weeks, without sacrificing the custom fit each brand actually needed."
-      ],
-      "impact": {
-        "headline": "Multiple production brand sites shipped, fully owned, on Vercel, with no page-builder fees and no agency turnaround time.",
-        "metrics": [
-          {
-            "label": "Sites shipped",
-            "value": "6+"
-          },
-          {
-            "label": "Page-builder fees",
-            "value": "Eliminated"
-          },
-          {
-            "label": "Ownership",
-            "value": "100% owned code"
-          }
-        ],
-        "benefits": [
-          "Full ownership of the code and the brand, nothing rented.",
-          "No recurring page-builder or template licensing fees.",
-          "Updates happen directly through Claude Code, no developer wait time.",
-          "Each site matches its brand exactly instead of a generic template.",
-          "Faster turnaround than briefing and waiting on an agency."
-        ]
-      },
-      "tools": [
-        "Claude Code",
-        "Next.js",
-        "Vercel",
-        "GitHub"
-      ],
-      "keyFeatures": [
-        "Production-grade sites coded to match each brand exactly, no templates.",
-        "Fully owned code deployed on Vercel, with no recurring builder fees.",
-        "Content and sections updatable directly through Claude Code after launch.",
-        "Fast load times from clean, purpose-built code instead of builder bloat.",
-        "Each site carries its own domain and full production deployment.",
-        "A repeatable build process across personal, marketing, and course sites."
-      ],
-      "videoUrl": "https://www.loom.com/share/6cc7658ae53d408dba04b44a37951ce1"
-    },
-    {
-      "slug": "daily-opportunity-cold-email",
-      "title": "Daily Opportunity & Cold Email",
-      "client": "Tomide Williams (personal system)",
-      "category": "Lead Conversion System",
-      "shortDescription": "An automated n8n system that researches new job and business opportunities every day and drafts a personalised cold email for each one.",
-      "brief": [
-        "Job hunting and business development both live or die on being first to reach out, and doing that research by hand every single day isn't sustainable alongside actual client work.",
-        "Relevant new roles and launches show up daily across several different sources, and manually checking each one, then writing a tailored email for anything worth pursuing, was consistently the first thing to slip when the day got busy.",
-        "I needed a system that finds relevant new opportunities every day and drafts the outreach for each one automatically, so all that's left for me to do is review and send."
-      ],
-      "implementation": [
-        {
-          "title": "Pull from real sources daily",
-          "detail": "Connected job search and launch-tracking APIs to pull fresh, relevant opportunities every day instead of manually searching multiple sites."
-        },
-        {
-          "title": "Filter for actual fit",
-          "detail": "Built filtering logic around the specific roles and business types worth pursuing, so the daily list is short and relevant, not a wall of noise."
-        },
-        {
-          "title": "Draft personalised outreach automatically",
-          "detail": "Generated a tailored cold email for every opportunity in the list, referencing the specific role or launch rather than a generic template."
-        },
-        {
-          "title": "Keep a human in the loop",
-          "detail": "Left final review and send with a person, so every email that goes out has been checked before it lands in someone's inbox."
-        }
-      ],
-      "before": [
-        "Finding new opportunities each day meant manually checking several job boards and launch trackers by hand.",
-        "Every outreach email was drafted from scratch, which meant either spending real time per email or sending generic ones that got ignored.",
-        "The volume of manual research needed made it easy to fall behind or miss good opportunities entirely."
-      ],
-      "after": [
-        "A daily automated pull surfaces relevant opportunities without any manual searching.",
-        "Every opportunity comes with a personalised draft email already written, ready for a quick review.",
-        "Staying consistent with outreach no longer depends on finding an extra hour in the day."
-      ],
-      "whyThisApproach": [
-        "The real cost of manual opportunity research isn't the searching itself, it's that research is the first thing to get skipped when the day gets busy.",
-        "That meant missed timing on exactly the opportunities that mattered most, the ones that needed a fast, well-written response before someone else got there first.",
-        "Automating the daily pull and the first draft of outreach meant the system did the work every day without fail, and a person only needed to review and hit send."
-      ],
-      "impact": {
-        "headline": "A daily pipeline of researched opportunities, each with a personalised email already drafted, running without manual searching.",
-        "metrics": [
-          {
-            "label": "Research",
-            "value": "Fully automated, daily"
-          },
-          {
-            "label": "Outreach drafts",
-            "value": "Personalised per opportunity"
-          },
-          {
-            "label": "Manual searching",
-            "value": "Removed"
-          }
-        ],
-        "benefits": [
-          "Never misses a day of opportunity research, even during busy weeks.",
-          "Every email is personalised to the specific opportunity, not a generic template.",
-          "Cuts outreach prep down to a quick review and send.",
-          "Surfaces opportunities that would otherwise be missed entirely.",
-          "Keeps outreach consistent without needing a dedicated hour each day."
-        ]
-      },
-      "tools": [
-        "n8n",
-        "Google Sheets"
-      ],
-      "keyFeatures": [
-        "Daily automated research pulled from live job and launch-tracking APIs.",
-        "Personalised cold email drafted automatically for every opportunity found.",
-        "A human review-and-send step keeps every email accountable.",
-        "Filtering logic keeps the daily list short and genuinely relevant.",
-        "Runs on a fixed daily schedule with no manual triggering.",
-        "Built entirely in n8n, with no dependency on a paid research tool."
-      ],
-      "videoUrl": "https://www.loom.com/share/df16e2996f364c8cbf34d4571f78cd7f"
-    },
-    {
-      "slug": "ai-voice-sms-followup",
-      "title": "AI Voice & SMS Follow-Up",
-      "client": "Capability build",
-      "category": "Lead Conversion System",
-      "shortDescription": "An n8n-orchestrated system that follows up every new lead with SMS and a real AI voice call, so no one waits on a human to be free.",
-      "brief": [
-        "Leads that don't get a fast follow-up go cold, and most businesses can't staff someone to call and text every single lead the moment they come in.",
-        "Relying on a person to notice a new lead and start the follow-up sequence meant real gaps, especially outside business hours or during a busy day.",
-        "I needed a system that follows up automatically, by SMS and by a real voice call, the second a lead enters the CRM, without a person having to trigger any of it."
-      ],
-      "implementation": [
-        {
-          "title": "Trigger from the CRM instantly",
-          "detail": "Built the flow to fire the moment a new lead lands in GoHighLevel, off a live webhook, so nothing depends on someone checking the pipeline."
-        },
-        {
-          "title": "Text first, call second",
-          "detail": "Sequenced an immediate SMS follow-up followed by an AI voice call, so the lead hears from the business twice, fast, through two different channels."
-        },
-        {
-          "title": "Orchestrate it all in n8n",
-          "detail": "Built the full sequencing, timing, and branching logic in n8n, so the system can adapt based on whether the lead replies to the text before the call goes out."
-        },
-        {
-          "title": "Log everything back to the CRM",
-          "detail": "Wired outcomes from both the SMS and the call back into GoHighLevel automatically, so the sales team always has a current record."
-        }
-      ],
-      "before": [
-        "New leads waited on a person to notice them and start the follow-up sequence by hand.",
-        "Follow-up happened through a single channel at a time, if it happened promptly at all.",
-        "Outcomes from calls and texts had to be logged manually, which meant records were often incomplete or delayed."
-      ],
-      "after": [
-        "Every new lead gets an SMS and a real AI voice call automatically, within moments of arriving in the CRM.",
-        "Two channels working together means a much higher chance of reaching the lead before they go cold.",
-        "Every outcome logs back into the CRM automatically, so the record is always current."
-      ],
-      "whyThisApproach": [
-        "Single-channel follow-up leaves too much reach to chance. A missed call or an ignored text can mean a lost lead, and either one happens often enough to matter.",
-        "Sequencing SMS and a real AI voice call together, triggered instantly and orchestrated in n8n, gave leads two real chances at a fast response instead of one.",
-        "Neither channel needed a person managing it. The system decides what happens next based on how the lead actually responds."
-      ],
-      "impact": {
-        "headline": "Every new lead gets a two-channel follow-up, SMS and a real voice call, within moments of arriving, with zero manual triggering.",
-        "metrics": [
-          {
-            "label": "Follow-up channels",
-            "value": "2 (SMS + voice)"
-          },
-          {
-            "label": "Response time",
-            "value": "Moments, not hours"
-          },
-          {
-            "label": "Manual triggering",
-            "value": "Removed"
-          }
-        ],
-        "benefits": [
-          "Two channels of follow-up instead of one, for a real shot at reaching every lead.",
-          "No lead waits on a person to start the sequence.",
-          "Every outcome logs automatically, keeping the CRM record current.",
-          "Consistent follow-up regardless of time of day or team availability.",
-          "Branching logic adapts the sequence to how the lead actually responds."
-        ]
-      },
-      "tools": [
-        "n8n",
-        "ElevenLabs",
-        "GoHighLevel"
-      ],
-      "keyFeatures": [
-        "Instant, automatic SMS and AI voice follow-up on every new lead.",
-        "Branching logic in n8n that adapts based on how the lead responds.",
-        "Automatic CRM logging for every outcome, across both channels.",
-        "Triggers directly off a live GoHighLevel webhook, no manual step.",
-        "Two-channel sequencing designed to maximize real response rate.",
-        "Built as a repeatable capability, not tied to one specific business."
-      ],
-      "videoUrl": "https://www.loom.com/share/cf395a75aaa1434a82a0fabea359f998"
-    },
-    {
-      "slug": "ghl-quiz-funnel-dashboard",
-      "title": "GHL Quiz Funnel Dashboard",
-      "client": "Koppoh (BOE)",
-      "category": "Lead Conversion System",
-      "shortDescription": "An interactive quiz funnel built in GoHighLevel that qualifies leads as they answer, feeding a live sales and analytics dashboard.",
-      "brief": [
-        "We wanted a way to qualify leads before they ever reached the sales team, instead of treating every quiz completion the same regardless of fit.",
-        "We also had no real visibility into how the funnel was performing: no view of completion rate, where people dropped off, or how many actually qualified by the end.",
-        "We needed an interactive quiz that scores people as they answer, and a dashboard that shows conversion at every step, not just a final lead count."
-      ],
-      "implementation": [
-        {
-          "title": "Design the qualifying questions",
-          "detail": "Built the quiz around the questions that actually predict whether someone is a fit, not generic survey filler."
-        },
-        {
-          "title": "Score as people answer",
-          "detail": "Wired scoring logic directly into GoHighLevel, so every response updates the lead's qualification in real time, before the quiz even ends."
-        },
-        {
-          "title": "Route qualified leads automatically",
-          "detail": "Connected completed, qualified quizzes straight into the sales pipeline, so the team sees only the people worth calling first."
-        },
-        {
-          "title": "Build the dashboard on top",
-          "detail": "Layered a sales and analytics dashboard over the funnel data, showing completion rate, qualification rate, and drop-off at every question."
-        }
-      ],
-      "before": [
-        "There was no way to qualify a lead before they reached the sales team, everyone got treated the same regardless of fit.",
-        "Funnel performance was invisible, there was no view of where people dropped off or how many actually qualified.",
-        "Sales worked from a flat lead list instead of a scored, prioritized one."
-      ],
-      "after": [
-        "The quiz scores every lead as they answer, so qualification happens before a person ever gets involved.",
-        "A live dashboard shows completion rate, qualification rate, and exactly where drop-off happens in the funnel.",
-        "Sales now works from a scored list, prioritized automatically instead of flat and unordered."
-      ],
-      "whyThisApproach": [
-        "A quiz funnel only pays off if it actually filters, and if you can see how it's performing well enough to improve it.",
-        "Wiring the scoring directly into GoHighLevel meant qualification happened live, during the quiz itself, not as a separate step done after the fact.",
-        "The dashboard turned what used to be a black-box funnel into something the team could actually watch, question, and improve."
-      ],
-      "impact": {
-        "headline": "Leads are scored the moment they finish the quiz, with a live dashboard showing exactly how the funnel performs at every step.",
-        "metrics": [
-          {
-            "label": "Lead scoring",
-            "value": "Real-time, in-quiz"
-          },
-          {
-            "label": "Funnel visibility",
-            "value": "Every step tracked"
-          },
-          {
-            "label": "Sales list",
-            "value": "Automatically prioritized"
-          }
-        ],
-        "benefits": [
-          "Leads are qualified before they ever reach the sales team.",
-          "Full visibility into completion, qualification, and drop-off at every question.",
-          "Sales works from a prioritized list instead of a flat one.",
-          "Underperforming questions can be spotted and fixed quickly.",
-          "Consistent scoring criteria applied to every single lead."
-        ]
-      },
-      "tools": [
         "GoHighLevel",
-        "Google Sheets"
-      ],
-      "keyFeatures": [
-        "An interactive quiz that scores leads in real time as they answer.",
-        "Automatic routing of qualified leads straight into the sales pipeline.",
-        "A live dashboard tracking completion, qualification, and drop-off by question.",
-        "Scoring logic built directly into GoHighLevel, no separate tool required.",
-        "Question-level analytics that show exactly where people disengage.",
-        "A repeatable pattern for qualifying leads before any human involvement."
-      ],
-      "videoUrl": "https://www.loom.com/share/54520c5bbde442e1bac99858bc8fa5b9"
-    },
-    {
-      "slug": "marketing-sales-analytics-dashboard",
-      "title": "Marketing & Sales Analytics Dashboard",
-      "client": "Koppoh",
-      "category": "Operations Intelligence System",
-      "shortDescription": "A live, custom-built dashboard that pulls sales and marketing activity into one view, replacing scattered spreadsheets and manual reporting.",
-      "brief": [
-        "Our marketing and sales teams each work from different systems, so leadership never has a complete picture of how the business is performing.",
-        "Every week, someone has to export reports, combine spreadsheets, and manually prepare updates just to answer simple questions. By the time those reports are ready, some of the information is already outdated.",
-        "We need one dashboard that brings everything together automatically, so we can see the entire customer journey in one place without relying on manual reporting."
-      ],
-      "implementation": [
-        {
-          "title": "Understand the reporting process",
-          "detail": "We met with the leadership, marketing, and sales teams to understand how reports were being prepared, where the data came from, and which business questions they needed answered every week."
-        },
-        {
-          "title": "Design one source of truth",
-          "detail": "We designed a dashboard that brings marketing and sales together into one live view, making it easy to track the customer journey from the first interaction through to conversion."
-        },
-        {
-          "title": "Build and connect the platform",
-          "detail": "The dashboard was built with Next.js and Recharts, then connected to the team's existing data sources so information updates automatically as new activity happens."
-        },
-        {
-          "title": "Test and roll out",
-          "detail": "Before replacing the manual reporting process, we validated the live dashboard against the team's existing reports to ensure the numbers matched. Once verified, the dashboard became the team's primary reporting tool."
-        }
-      ],
-      "before": [
-        "Marketing and sales worked from different systems, making it difficult to understand how the business was performing as a whole.",
-        "Every week, someone had to export reports from multiple platforms, combine the data manually, and prepare a summary for leadership.",
-        "By the time reports were ready, the information was often several days old, making it difficult to respond quickly to changes in performance."
-      ],
-      "after": [
-        "Leadership now has one dashboard that combines marketing and sales into a single live view.",
-        "The dashboard updates automatically throughout the day, giving everyone access to the latest information without waiting for weekly reports.",
-        "Instead of spending hours preparing reports, the team can immediately see performance, identify issues, and focus on making better business decisions."
-      ],
-      "whyThisApproach": [
-        "The problem wasn't that the business lacked reports, it already had them.",
-        "The real issue was that every report depended on someone manually gathering information from different systems before anyone could make a decision.",
-        "Rather than improving the reporting process, we removed it. By connecting the existing data sources into one live dashboard, leadership always has access to accurate, up-to-date information without waiting for someone to prepare it, which means less time reporting and more time making decisions."
-      ],
-      "impact": {
-        "headline": "One live dashboard across marketing and sales, eliminating 5–8 hours of weekly reporting and up to 90% of manual reporting work.",
-        "metrics": [
-          {
-            "label": "Time saved weekly",
-            "value": "5–8 hours",
-            "description": "The time previously spent exporting, cleaning, and combining reports is now almost entirely eliminated."
-          },
-          {
-            "label": "Manual reporting",
-            "value": "Up to 90% less",
-            "description": "Most reporting now happens automatically, reducing repetitive administrative work across the team."
-          },
-          {
-            "label": "Cross-team visibility",
-            "value": "100%",
-            "description": "Leadership can now see the complete customer journey in one place instead of switching between multiple systems."
-          },
-          {
-            "label": "Business insights",
-            "value": "Real-time",
-            "description": "Performance updates automatically as new data comes in, so decisions are based on current information instead of last week's reports."
-          },
-          {
-            "label": "Answering questions",
-            "value": "In seconds",
-            "description": "Business questions that previously required digging through multiple reports can now be answered almost instantly."
-          },
-          {
-            "label": "Source of truth",
-            "value": "One shared",
-            "description": "Everyone works from the same live data, reducing confusion, duplicate reporting, and conflicting numbers."
-          }
-        ],
-        "benefits": [
-          "One live dashboard instead of five separate weekly exports.",
-          "Leadership decisions based on current data, not last week's numbers.",
-          "No more reconciling mismatched numbers between marketing and sales.",
-          "Frees up hours every week previously spent assembling reports.",
-          "A single source of truth the whole leadership team trusts."
-        ]
-      },
-      "tools": [
-        "Claude Code",
-        "Next.js",
-        "Recharts",
-        "GitHub",
-        "Vercel"
-      ],
-      "keyFeatures": [
-        "5–8 hours saved every week by eliminating manual report preparation.",
-        "Up to 90% reduction in reporting effort through automated dashboards.",
-        "One live dashboard combining marketing and sales into a single view.",
-        "Real-time visibility into the entire customer journey.",
-        "Faster decision-making using live business data instead of outdated reports.",
-        "Greater alignment across leadership, marketing, and sales with one shared source of truth.",
-        "Less time preparing reports, more time improving performance."
-      ],
-      "videoUrl": "https://www.loom.com/share/3311d51887d8405fa44ea9d374b977da"
-    },
-    {
-      "slug": "content-management-system",
-      "title": "Custom Content Management System",
-      "client": "Koppoh",
-      "category": "Marketing Automation System",
-      "shortDescription": "A fully custom-coded content platform that plans and tracks every piece of launch content months in advance across content, social, and design teams.",
-      "brief": [
-        "Our product launches usually take between three and four months, and coordinating everyone involved is becoming a real challenge.",
-        "We have content, design, marketing, and other teams all working on different parts of the launch, but information is spread across different tools and conversations.",
-        "It's difficult to know who's working on what, what has been completed, what's behind schedule, and what needs attention.",
-        "We'd like one central system where everyone can work together, manage tasks, track progress, and have complete visibility throughout the entire launch process."
-      ],
-      "implementation": [
-        {
-          "title": "Understand how the team really works",
-          "detail": "We spent time with the content, social, and design teams to understand how launches are planned from start to finish. We mapped every stage of the process, identified where work slowed down, where information got lost, and where teams depended on manual follow-ups to move work forward."
-        },
-        {
-          "title": "Design one shared workflow",
-          "detail": "Instead of forcing the team into a generic project management tool, we designed a workflow around how Koppoh already operates. Every launch now lives in one shared workspace, giving each team the view they need while keeping everyone aligned on the same timeline."
-        },
-        {
-          "title": "Build the platform",
-          "detail": "We developed the platform using Next.js and Supabase, creating a fast, collaborative workspace where tasks, approvals, deadlines, and progress update in real time. As work moves through the pipeline, everyone automatically sees the latest status without chasing updates."
-        },
-        {
-          "title": "Test, improve, and launch",
-          "detail": "Before rolling it out across the team, we tested the system during real product launches, gathered feedback, and refined the workflows. The result is a platform that gives everyone a clear view of what's happening, reduces unnecessary meetings, and keeps launches moving from planning through execution."
-        }
-      ],
-      "before": [
-        "Every Koppoh launch ran over a three to four-month period and involved the content, social, and design teams. Each team managed its work in different tools, making it difficult to keep everyone aligned.",
-        "Content briefs, social calendars, and design requests were all managed separately, so there was no single source of truth for the launch. As deadlines approached, it became increasingly difficult to know what had been completed, what was still in progress, and what was waiting on another team.",
-        "Weekly meetings were largely spent collecting updates and reconciling different plans instead of discussing the launch itself."
-      ],
-      "after": [
-        "Every launch now has a dedicated workspace where the content, social, and design teams work from the same live launch plan.",
-        "Tasks, approvals, and project status update automatically as work progresses, giving everyone real-time visibility without relying on manual updates.",
-        "At any point during a launch, the team can immediately see what has been completed, what is currently in progress, what is overdue, and what is waiting on another team, all from a single workspace.",
-        "The result was a 40%+ improvement in team productivity and more than 10 hours per week returned to the team by reducing manual coordination, status reporting, and unnecessary meetings."
-      ],
-      "whyThisApproach": [
-        "A generic project management platform would have solved only part of the problem.",
-        "The bigger cost was asking three teams to change how they worked just to fit the software. Koppoh needed a system built around its existing launch process, not the other way around.",
-        "Building a custom platform meant every workflow, approval, and handoff reflected how the business already operated, giving all three teams one shared source of truth without changing the way they worked."
-      ],
-      "impact": {
-        "headline": "A 40%+ increase in team productivity across content, social, and design, with the weekly status sync eliminated.",
-        "metrics": [
-          {
-            "label": "Team productivity",
-            "value": "40%+"
-          },
-          {
-            "label": "Hours returned weekly",
-            "value": "10+"
-          },
-          {
-            "label": "Status meetings",
-            "value": "Eliminated"
-          }
-        ],
-        "benefits": [
-          "One shared source of truth for every launch, so no brief, request, or piece of content is ever lost between teams again.",
-          "No more meetings held just to find out what's already done, the plan answers that question on its own.",
-          "The system scales to any number of future launches, each with its own dedicated workspace.",
-          "Teams spend less time reconciling plans and more time producing the launch.",
-          "New team members can see exactly where a launch stands without a handoff meeting."
-        ]
-      },
-      "tools": [
-        "Claude Code",
-        "Next.js",
-        "Supabase",
-        "GitHub",
-        "Vercel"
-      ],
-      "keyFeatures": [
-        "A single launch timeline that keeps every team working from the same plan, with updates reflected in real time as work progresses.",
-        "Automatic progress tracking that updates as tasks move through each stage, eliminating manual status updates and reducing the need for follow-up.",
-        "Dedicated workspaces for content, social, and design, giving each team the tools they need while keeping everyone aligned on the overall launch.",
-        "Built entirely custom in Next.js and Supabase, matched to Koppoh's real launch process.",
-        "Removed the weekly status meeting entirely.",
-        "Scales cleanly to any number of future product launches."
-      ],
-      "videoUrl": "https://www.loom.com/share/8f0732c319484534a2986df218535302"
-    },
-    {
-      "slug": "blossom-fast-lane-chatbot",
-      "title": "Fast Lane Launch Chatbot",
-      "client": "Blossom Affia",
-      "category": "Lead Conversion System",
-      "shortDescription": "A chatbot built for the Fast Lane product launch that drove 350 signups and ₦2 million in revenue within a week.",
-      "brief": [
-        "Blossom Affia needed a way to qualify and convert leads automatically for the Fast Lane product launch without manual follow-up.",
-        "We needed to capture interest, answer questions, and drive direct sales immediately upon launch."
-      ],
-      "implementation": [
-        {
-          "title": "Build the Chatbot",
-          "detail": "Designed and deployed an automated chatbot to handle lead qualification and inquiries in real-time."
-        },
-        {
-          "title": "Launch Integration",
-          "detail": "Integrated the chatbot into the product launch funnel to capture signups and process payments."
-        }
-      ],
-      "before": [
-        "Product launches typically required heavy manual follow-up to answer questions and qualify leads.",
-        "Sales were often lost due to delayed responses during high-traffic launch windows."
-      ],
-      "after": [
-        "The chatbot handled inquiries instantly, capturing 350 signups and driving ₦1 million on launch day alone.",
-        "Within a week, the system generated ₦2 million in revenue with minimal manual intervention."
-      ],
-      "whyThisApproach": [
-        "An automated chatbot ensures that every lead receives an immediate response, maximizing conversion during the critical launch window."
-      ],
-      "impact": {
-        "headline": "Drove 350 signups and ₦2 million in revenue within the first week of launch.",
-        "metrics": [
-          {
-            "label": "Total Signups",
-            "value": "350"
-          },
-          {
-            "label": "Launch Day Revenue",
-            "value": "₦1M"
-          },
-          {
-            "label": "First Week Revenue",
-            "value": "₦2M"
-          }
-        ],
-        "benefits": [
-          "Instant lead qualification and response.",
-          "High conversion rate during the launch window.",
-          "Significant revenue generated with zero manual follow-up."
-        ]
-      },
-      "tools": [
-        "GoHighLevel",
+        "OpenAI",
         "n8n"
       ],
       "keyFeatures": [
-        "Automated lead capture and qualification.",
-        "Real-time responses to product inquiries.",
-        "Seamless integration with the launch funnel."
+        "Instant inbound response",
+        "Multi-channel follow-up (Email/SMS)",
+        "Automated lead scoring",
+        "Direct CRM integration"
       ],
-      "videoUrl": ""
+      "videoUrl": "https://www.loom.com/share/example"
     },
     {
-      "slug": "market-research-automation",
-      "title": "Automated Market Research",
-      "client": "Tomide Williams",
-      "category": "Operations Intelligence System",
-      "shortDescription": "Automated market research and Google Workspace integration using Codex.",
+      "slug": "ai-customer-support-agents",
+      "title": "AI Customer Support Agents",
+      "client": "Standard Deployment",
+      "category": "AI Customer Support Agents",
+      "shortDescription": "Answer the questions customers keep asking, fix the simple issues, and only hand it to a person when it truly needs one.",
       "brief": [
-        "Market research is incredibly time-consuming but essential for creating targeted campaigns and product positioning.",
-        "I needed a system to automatically gather, synthesize, and format market research into Google Workspace without manual data entry."
+        "Support teams are often overwhelmed by the same repetitive questions, leaving less time for complex issues.",
+        "Customers expect instant answers, but scaling human support 24/7 is cost-prohibitive.",
+        "We needed an intelligent layer to handle the bulk of inquiries while seamlessly routing complex tickets to humans."
+      ],
+      "implementation": [
+        {
+          "title": "Knowledge Base Integration",
+          "detail": "Trained the AI on the company's specific documentation, past tickets, and FAQs to ensure accurate answers."
+        },
+        {
+          "title": "Resolution Workflows",
+          "detail": "Built automated flows for common actions like password resets, order tracking, and basic troubleshooting."
+        },
+        {
+          "title": "Smart Handoff",
+          "detail": "Implemented sentiment analysis and complexity scoring to instantly route frustrated users or complex issues to human agents."
+        }
+      ],
+      "before": [
+        "Support agents spent 70% of their day answering the same five questions.",
+        "Customers waited hours for simple answers.",
+        "High volume meant human agents rushed through complex issues."
+      ],
+      "after": [
+        "The AI handles up to 80% of routine inquiries instantly, 24/7.",
+        "Human agents have the time to provide white-glove support for complex issues.",
+        "Customer satisfaction scores improved due to zero wait times for simple fixes."
+      ],
+      "whyThisApproach": [
+        "Customers don't want to talk to a human; they want their problem solved quickly.",
+        "By resolving the simple issues automatically, we improve the customer experience while drastically reducing support costs."
+      ],
+      "impact": {
+        "headline": "Instant resolution for routine tickets and protected time for complex support.",
+        "metrics": [
+          {
+            "label": "Resolution Time",
+            "value": "Instant"
+          },
+          {
+            "label": "Ticket Deflection",
+            "value": "Up to 80%"
+          },
+          {
+            "label": "24/7 Coverage",
+            "value": "Active"
+          }
+        ],
+        "benefits": [
+          "Zero wait time for common questions.",
+          "Reduced support ticket backlog.",
+          "Higher quality human interactions."
+        ]
+      },
+      "tools": [
+        "Claude Code",
+        "Zendesk",
+        "Intercom",
+        "OpenAI"
+      ],
+      "keyFeatures": [
+        "Trained on proprietary company data",
+        "Seamless human handoff",
+        "Multi-lingual support",
+        "Automated issue resolution"
+      ],
+      "videoUrl": "https://www.loom.com/share/example"
+    },
+    {
+      "slug": "ai-operations-agents",
+      "title": "AI Operations Agents",
+      "client": "Standard Deployment",
+      "category": "AI Operations Agents",
+      "shortDescription": "Handle the internal work that eats your team's time: reporting, data, coordination, and documentation.",
+      "brief": [
+        "Behind every business is a mountain of invisible work: formatting reports, moving data between systems, and chasing updates.",
+        "This administrative overhead drains momentum and keeps talented people doing robotic tasks.",
+        "We built operations agents to act as invisible coordinators, handling the connective tissue of the business."
       ],
       "implementation": [
         {
           "title": "Data Aggregation",
-          "detail": "Built automated workflows to pull market data and competitor insights."
+          "detail": "Set up agents to automatically pull data from multiple disconnected systems into unified reports."
         },
         {
-          "title": "Workspace Integration",
-          "detail": "Connected Codex to Google Workspace to automatically draft research reports in Docs and Sheets."
+          "title": "Workflow Orchestration",
+          "detail": "Built rules-based agents to trigger next steps in a process, assign tasks, and follow up on deadlines."
+        },
+        {
+          "title": "Automated Documentation",
+          "detail": "Created systems that watch project updates and automatically generate summaries, changelogs, and client reports."
         }
       ],
       "before": [
-        "Hours were spent manually searching for market data and formatting it into reports.",
-        "Insights were often siloed or outdated by the time they were compiled."
+        "Team members spent hours every week manually compiling data for weekly meetings.",
+        "Tasks stalled because someone forgot to notify the next person in the chain.",
+        "Documentation was always out of date."
       ],
       "after": [
-        "Comprehensive market research reports are generated automatically and saved directly to Google Drive.",
-        "Data is always current and readily available for campaign planning."
+        "Reports generate themselves before the meeting starts.",
+        "Handoffs between team members happen automatically.",
+        "Documentation stays current without manual intervention."
       ],
       "whyThisApproach": [
-        "Automating the research phase frees up time for strategic decision-making rather than data entry."
+        "Operations should be invisible. When teams have to manually manage their processes, they aren't doing the work they were hired for.",
+        "AI agents are perfectly suited for repetitive, data-heavy coordination."
       ],
       "impact": {
-        "headline": "Eliminated manual market research, automatically generating reports directly into Google Workspace.",
+        "headline": "Eliminated the administrative friction that slows teams down.",
         "metrics": [
           {
-            "label": "Research Automation",
+            "label": "Admin Time Saved",
+            "value": "10+ hrs/week per rep"
+          },
+          {
+            "label": "Data Accuracy",
             "value": "100%"
           },
           {
-            "label": "Manual Data Entry",
-            "value": "Eliminated"
+            "label": "Reporting Delay",
+            "value": "None"
           }
         ],
         "benefits": [
-          "Instant access to comprehensive market data.",
-          "Reports formatted and ready in Google Docs.",
-          "More time spent on strategy instead of research."
-        ]
-      },
-      "tools": [
-        "Codex",
-        "Google Workspace",
-        "n8n"
-      ],
-      "keyFeatures": [
-        "Automated data extraction and synthesis.",
-        "Direct integration with Google Docs and Sheets.",
-        "Customizable research parameters."
-      ],
-      "videoUrl": "https://www.loom.com/share/686cce19efda47ebb3ce6677db86c22b"
-    },
-    {
-      "slug": "meta-ads-automation",
-      "title": "Meta Ads Automation",
-      "client": "Tomide Williams",
-      "category": "Marketing Automation System",
-      "shortDescription": "A custom Meta Ads MCP server that automates ad management, driving a 45x ROAS.",
-      "brief": [
-        "Managing Meta Ads requires constant monitoring, adjusting budgets, and analyzing performance data.",
-        "I wanted to connect Claude Code directly to Meta Ads via an MCP server to manage campaigns autonomously."
-      ],
-      "implementation": [
-        {
-          "title": "MCP Server Build",
-          "detail": "Developed a custom MCP server to interact with the Meta Ads API."
-        },
-        {
-          "title": "Automated Optimization",
-          "detail": "Created workflows for Claude Code to analyze performance and adjust bids and budgets."
-        }
-      ],
-      "before": [
-        "Campaigns required manual daily check-ins to prevent wasted spend.",
-        "Optimization was slow and prone to human error."
-      ],
-      "after": [
-        "The MCP server enables Claude Code to monitor and optimize ads in real-time, resulting in a 45x ROAS.",
-        "Campaign management is hands-free, with automated reporting and adjustments."
-      ],
-      "whyThisApproach": [
-        "Direct API access via MCP allows an LLM to manage ad campaigns with far greater speed and precision than manual adjustments."
-      ],
-      "impact": {
-        "headline": "Achieved a 45x ROAS through fully automated Meta Ads management via a custom MCP server.",
-        "metrics": [
-          {
-            "label": "ROAS",
-            "value": "45x"
-          },
-          {
-            "label": "Manual Management",
-            "value": "Eliminated"
-          }
-        ],
-        "benefits": [
-          "Real-time campaign optimization.",
-          "Massive return on ad spend.",
-          "Hands-free ad management."
+          "Frees up team capacity for deep work.",
+          "Ensures processes run consistently every time.",
+          "Provides real-time operational visibility."
         ]
       },
       "tools": [
         "Claude Code",
-        "Meta Ads",
-        "MCP"
+        "n8n",
+        "ClickUp",
+        "Google Workspace"
       ],
       "keyFeatures": [
-        "Custom Meta Ads MCP server.",
-        "Automated bid and budget adjustments.",
-        "Real-time performance analysis and reporting."
+        "Cross-platform data syncing",
+        "Automated report generation",
+        "Task assignment and follow-up",
+        "Process monitoring"
       ],
-      "videoUrl": "https://www.loom.com/share/b840c6796aff421482008263213c5741"
+      "videoUrl": "https://www.loom.com/share/example"
+    },
+    {
+      "slug": "marketing-outreach-agents",
+      "title": "Marketing & Outreach Agents",
+      "client": "Standard Deployment",
+      "category": "Marketing & Outreach Agents",
+      "shortDescription": "Write drafts, personalise outreach, and run campaigns across every platform, without the manual grind.",
+      "brief": [
+        "Personalized marketing works, but doing it at scale is impossible without a massive team.",
+        "Generic blasts get ignored, but researching every prospect and drafting unique copy takes too long.",
+        "We needed an engine that could produce highly personalized, researched content and outreach at scale."
+      ],
+      "implementation": [
+        {
+          "title": "Deep Research",
+          "detail": "Deployed agents to scrape prospect data, company news, and LinkedIn profiles to find relevant hooks."
+        },
+        {
+          "title": "Content Generation",
+          "detail": "Built prompts that generate first drafts of emails, social posts, and ad copy matching the brand's exact voice."
+        },
+        {
+          "title": "Campaign Execution",
+          "detail": "Wired the generated content directly into sending platforms and ad managers for seamless execution."
+        }
+      ],
+      "before": [
+        "Outreach was either highly personalized but low volume, or high volume but completely generic.",
+        "Creating a month of social content took a full week of drafting and approval."
+      ],
+      "after": [
+        "Thousands of prospects receive emails that look like they were hand-researched for hours.",
+        "Content calendars are filled with high-quality, on-brand drafts in minutes.",
+        "Campaigns launch faster with more variants to test."
+      ],
+      "whyThisApproach": [
+        "The bottleneck in marketing is production. AI solves the production bottleneck while allowing humans to maintain strategic control.",
+        "Deep personalization at scale is the only way to cut through the noise."
+      ],
+      "impact": {
+        "headline": "Hyper-personalized marketing campaigns executed at the speed of automation.",
+        "metrics": [
+          {
+            "label": "Personalization",
+            "value": "100% at scale"
+          },
+          {
+            "label": "Content Production",
+            "value": "10x faster"
+          },
+          {
+            "label": "Response Rates",
+            "value": "Dramatically increased"
+          }
+        ],
+        "benefits": [
+          "Scale outreach without losing quality.",
+          "Maintain a consistent, active brand presence.",
+          "Test more angles and ideas quickly."
+        ]
+      },
+      "tools": [
+        "Claude Code",
+        "Instantly",
+        "LinkedIn API",
+        "n8n"
+      ],
+      "keyFeatures": [
+        "Automated prospect research",
+        "Brand voice matching",
+        "Multi-channel content drafting",
+        "Campaign analytics"
+      ],
+      "videoUrl": "https://www.loom.com/share/example"
+    },
+    {
+      "slug": "custom-internal-ai-agents",
+      "title": "Custom Internal AI Agents",
+      "client": "Standard Deployment",
+      "category": "Custom Internal AI Agents",
+      "shortDescription": "Built around your specific systems, your data, and the way your business actually works, not a template.",
+      "brief": [
+        "Off-the-shelf AI tools are great, but they don't know your proprietary processes or how your specific systems connect.",
+        "Generic AI requires you to change how you work to fit the tool.",
+        "We build bespoke agents that adapt to your business, securely accessing your private data to solve unique operational bottlenecks."
+      ],
+      "implementation": [
+        {
+          "title": "Process Mapping",
+          "detail": "Mapped the exact, unique workflows of the business to identify where AI could replace manual effort."
+        },
+        {
+          "title": "Secure Integration",
+          "detail": "Connected large language models securely to proprietary databases, ERPs, and internal tools via custom APIs."
+        },
+        {
+          "title": "Tailored Logic",
+          "detail": "Built specific decision trees and guardrails to ensure the agent follows the company's strict operational rules."
+        }
+      ],
+      "before": [
+        "Complex, company-specific tasks relied entirely on tribal knowledge and manual execution.",
+        "Off-the-shelf AI tools couldn't access internal databases or follow bespoke compliance rules."
+      ],
+      "after": [
+        "A custom agent handles complex internal workflows exactly as a trained employee would.",
+        "Proprietary data is leveraged securely without leaving the company's ecosystem.",
+        "Tribal knowledge is encoded into a reliable, automated system."
+      ],
+      "whyThisApproach": [
+        "True operational efficiency comes from automating the processes that make your business unique, not just the generic ones.",
+        "A custom build ensures the AI respects your security, data, and exact business logic."
+      ],
+      "impact": {
+        "headline": "A bespoke AI workforce built specifically for your unique operational DNA.",
+        "metrics": [
+          {
+            "label": "System Integration",
+            "value": "Fully Custom"
+          },
+          {
+            "label": "Data Security",
+            "value": "Private & Secure"
+          },
+          {
+            "label": "Process Accuracy",
+            "value": "100% compliant"
+          }
+        ],
+        "benefits": [
+          "Fits your business; you don't fit it.",
+          "Unlocks the value of proprietary data.",
+          "Encodes tribal knowledge permanently."
+        ]
+      },
+      "tools": [
+        "Claude Code",
+        "Custom APIs",
+        "Python",
+        "Supabase"
+      ],
+      "keyFeatures": [
+        "Proprietary data integration",
+        "Custom business logic encoding",
+        "Enterprise-grade security",
+        "Bespoke UI/UX"
+      ],
+      "videoUrl": "https://www.loom.com/share/example"
+    },
+    {
+      "slug": "ai-voice-agents",
+      "title": "AI Voice Agents",
+      "client": "Standard Deployment",
+      "category": "AI Voice Agents",
+      "shortDescription": "Answer and place real phone calls to schedule appointments, qualify leads, and handle tier-one support automatically.",
+      "brief": [
+        "Phone calls are the most urgent form of communication, but staffing phones 24/7 is impossible for most businesses.",
+        "Missed calls mean missed revenue, and robotic IVR phone menus frustrate callers.",
+        "We deployed conversational AI voice agents that sound human, understand context, and can actually execute tasks over the phone."
+      ],
+      "implementation": [
+        {
+          "title": "Conversational Design",
+          "detail": "Built natural-sounding dialogue flows that handle interruptions, tangents, and accents gracefully."
+        },
+        {
+          "title": "System Connectivity",
+          "detail": "Wired the voice agent into the calendar and CRM so it can physically book appointments and update records during the call."
+        },
+        {
+          "title": "Inbound & Outbound",
+          "detail": "Set up the agent to instantly answer all inbound calls and run massive outbound dialing campaigns for lead reactivation."
+        }
+      ],
+      "before": [
+        "After-hours calls went to voicemail and were often ignored by prospects.",
+        "Receptionists spent hours making outbound confirmation calls.",
+        "Call spikes resulted in long hold times and abandoned leads."
+      ],
+      "after": [
+        "Every call is answered instantly by a friendly, intelligent voice agent, 24/7.",
+        "Appointments are booked and confirmed on the calendar without human intervention.",
+        "Outbound campaigns can dial thousands of leads in minutes."
+      ],
+      "whyThisApproach": [
+        "Voice is still the highest-converting channel, but it's the hardest to scale.",
+        "Modern voice AI is finally fast and natural enough to provide a great customer experience while massively scaling capacity."
+      ],
+      "impact": {
+        "headline": "A 24/7 conversational voice team that never misses a call, never takes a break, and scales infinitely.",
+        "metrics": [
+          {
+            "label": "Missed Calls",
+            "value": "Zero"
+          },
+          {
+            "label": "After-hours bookings",
+            "value": "Increased"
+          },
+          {
+            "label": "Outbound Capacity",
+            "value": "Infinite"
+          }
+        ],
+        "benefits": [
+          "Capture revenue from after-hours callers.",
+          "Eliminate hold times completely.",
+          "Run massive outbound campaigns instantly."
+        ]
+      },
+      "tools": [
+        "ElevenLabs",
+        "Vapi",
+        "Twilio",
+        "GoHighLevel"
+      ],
+      "keyFeatures": [
+        "Ultra-low latency conversational AI",
+        "Live calendar booking",
+        "Inbound answering & Outbound dialing",
+        "Call transcription and CRM syncing"
+      ],
+      "videoUrl": "https://www.loom.com/share/example"
     }
   ]
 }
