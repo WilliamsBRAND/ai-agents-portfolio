@@ -58,7 +58,7 @@
       "slug": "personal-ai-assistant",
       "title": "Personal AI Assistant",
       "client": "Tomide Williams (personal system)",
-      "category": "Operations Intelligence System",
+      "category": "AI Operations Agents",
       "shortDescription": "A Claude Code powered executive assistant that runs Tomide's entire operation, email, calendar, docs, projects, and decisions, from one command line.",
       "brief": [
         "I run consulting, coaching, a job search, and several side projects at the same time, and I was losing real hours every week just switching between Gmail, Docs, Sheets, Calendar, and a dozen other tools to keep track of it all.",
@@ -146,7 +146,7 @@
       "slug": "claude-code-mcp-servers",
       "title": "Claude Code MCP Servers",
       "client": "Tomide Williams (personal system)",
-      "category": "Operations Intelligence System",
+      "category": "AI Customer Support Agents",
       "shortDescription": "A working demo of Claude Code connected to dozens of live tools at once through MCP, turned into a single command center for running a business.",
       "brief": [
         "Claude Code is powerful on its own, but most of the actual work in my business happens inside other tools: Gmail, GoHighLevel, ClickUp, Supabase, Figma, and a dozen more.",
@@ -231,7 +231,7 @@
       "slug": "ai-marketing-automation",
       "title": "AI Marketing Automation",
       "client": "Tomide Williams (personal practice)",
-      "category": "Marketing Automation System",
+      "category": "Marketing & Outreach Agents",
       "shortDescription": "A walkthrough of the actual AI agent workflows used to plan, write, and run marketing end to end, from content ideas to live, tracked campaigns.",
       "brief": [
         "Marketing work is full of small, repeatable tasks, competitor research, ad copy, content drafts, campaign reporting, and each one eats real time if it's done by hand.",
@@ -315,7 +315,7 @@
       "slug": "google-workspace-cli-integration",
       "title": "Google Workspace CLI Integration",
       "client": "Tomide Williams (personal system)",
-      "category": "Operations Intelligence System",
+      "category": "AI Operations Agents",
       "shortDescription": "A custom CLI that gives Claude Code full, direct control over Gmail, Docs, Sheets, Calendar, Drive, and Slides, no browser required.",
       "brief": [
         "I needed Claude Code to actually do things in Google Workspace: draft and send emails, build out Sheets, create Docs, manage my calendar, not just describe what I should go click on.",
@@ -399,7 +399,7 @@
       "slug": "ghl-stripe-payment-automation",
       "title": "GHL + Stripe Payment Automation",
       "client": "Karl Mifsud Wealth",
-      "category": "Operations Intelligence System",
+      "category": "Custom Internal AI Agents",
       "shortDescription": "A complete payment operations system built to manage agreements, activation fees, renewals, refunds, failed payments, and follow-ups without manual tracking.",
       "brief": [
         "Karl Mifsud Wealth needed a reliable system for managing the full payment lifecycle of its membership programme.",
@@ -483,7 +483,7 @@
       "slug": "learning-management-platform",
       "title": "Learning Management Platform",
       "client": "Blossom Affia",
-      "category": "Marketing Automation System",
+      "category": "AI Voice Agents",
       "shortDescription": "A custom-built LMS for a content creator to host and sell her own courses directly to her audience, no platform fees.",
       "brief": [
         "I've built a real audience and I want to sell my own courses directly to them.",
@@ -569,7 +569,7 @@
       "slug": "websites-built-with-claude-code",
       "title": "Websites Built With Claude Code",
       "client": "Multiple brands (TW, Koppoh, Blossom Affia)",
-      "category": "Marketing Automation System",
+      "category": "Marketing & Outreach Agents",
       "shortDescription": "A look at several production websites, personal brand, marketing, and course sites, built entirely with Claude Code instead of a page builder or agency.",
       "brief": [
         "Every brand I work with needs a real website, and paying an agency or renting a page builder for each one adds up fast, both in cost and in how much control you actually get over the result.",
@@ -653,7 +653,7 @@
       "slug": "daily-opportunity-cold-email",
       "title": "Daily Opportunity & Cold Email",
       "client": "Tomide Williams (personal system)",
-      "category": "Lead Conversion System",
+      "category": "AI Sales Agents",
       "shortDescription": "An automated n8n system that researches new job and business opportunities every day and drafts a personalised cold email for each one.",
       "brief": [
         "Job hunting and business development both live or die on being first to reach out, and doing that research by hand every single day isn't sustainable alongside actual client work.",
@@ -735,7 +735,7 @@
       "slug": "ai-voice-sms-followup",
       "title": "AI Voice & SMS Follow-Up",
       "client": "Capability build",
-      "category": "Lead Conversion System",
+      "category": "AI Voice Agents",
       "shortDescription": "An n8n-orchestrated system that follows up every new lead with SMS and a real AI voice call, so no one waits on a human to be free.",
       "brief": [
         "Leads that don't get a fast follow-up go cold, and most businesses can't staff someone to call and text every single lead the moment they come in.",
@@ -818,7 +818,7 @@
       "slug": "ghl-quiz-funnel-dashboard",
       "title": "GHL Quiz Funnel Dashboard",
       "client": "Koppoh (BOE)",
-      "category": "Lead Conversion System",
+      "category": "AI Sales Agents",
       "shortDescription": "An interactive quiz funnel built in GoHighLevel that qualifies leads as they answer, feeding a live sales and analytics dashboard.",
       "brief": [
         "We wanted a way to qualify leads before they ever reached the sales team, instead of treating every quiz completion the same regardless of fit.",
@@ -900,7 +900,7 @@
       "slug": "marketing-sales-analytics-dashboard",
       "title": "Marketing & Sales Analytics Dashboard",
       "client": "Koppoh",
-      "category": "Operations Intelligence System",
+      "category": "AI Operations Agents",
       "shortDescription": "A live, custom-built dashboard that pulls sales and marketing activity into one view, replacing scattered spreadsheets and manual reporting.",
       "brief": [
         "Our marketing and sales teams each work from different systems, so leadership never has a complete picture of how the business is performing.",
@@ -1004,7 +1004,7 @@
       "slug": "content-management-system",
       "title": "Custom Content Management System",
       "client": "Koppoh",
-      "category": "Marketing Automation System",
+      "category": "Marketing & Outreach Agents",
       "shortDescription": "A fully custom-coded content platform that plans and tracks every piece of launch content months in advance across content, social, and design teams.",
       "brief": [
         "Our product launches usually take between three and four months, and coordinating everyone involved is becoming a real challenge.",
@@ -1091,7 +1091,7 @@
       "slug": "blossom-fast-lane-chatbot",
       "title": "Fast Lane Launch Chatbot",
       "client": "Blossom Affia",
-      "category": "Lead Conversion System",
+      "category": "AI Sales Agents",
       "shortDescription": "A chatbot built for the Fast Lane product launch that drove 350 signups and ₦2 million in revenue within a week.",
       "brief": [
         "Blossom Affia needed a way to qualify and convert leads automatically for the Fast Lane product launch without manual follow-up.",
@@ -1155,7 +1155,7 @@
       "slug": "market-research-automation",
       "title": "Automated Market Research",
       "client": "Tomide Williams",
-      "category": "Operations Intelligence System",
+      "category": "AI Operations Agents",
       "shortDescription": "Automated market research and Google Workspace integration using Codex.",
       "brief": [
         "Market research is incredibly time-consuming but essential for creating targeted campaigns and product positioning.",
@@ -1216,7 +1216,7 @@
       "slug": "meta-ads-automation",
       "title": "Meta Ads Automation",
       "client": "Tomide Williams",
-      "category": "Marketing Automation System",
+      "category": "Marketing & Outreach Agents",
       "shortDescription": "A custom Meta Ads MCP server that automates ad management, driving a 45x ROAS.",
       "brief": [
         "Managing Meta Ads requires constant monitoring, adjusting budgets, and analyzing performance data.",
