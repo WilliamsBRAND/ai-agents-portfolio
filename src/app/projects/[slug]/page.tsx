@@ -88,8 +88,8 @@ export default async function ProjectPage({
                 <iframe
                   src={
                     video.provider === "loom"
-                      ? `https://www.loom.com/embed/${video.id}`
-                      : `https://www.youtube.com/embed/${video.id}`
+                      ? `https://www.loom.com/embed/${video.id}?autoplay=1`
+                      : `https://www.youtube.com/embed/${video.id}?autoplay=1`
                   }
                   title={`${project.title} walkthrough`}
                   className="h-full w-full"

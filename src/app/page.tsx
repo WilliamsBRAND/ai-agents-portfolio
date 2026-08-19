@@ -51,7 +51,7 @@ export default function Home() {
           <div className="rounded-2xl border border-border-subtle bg-[rgb(20,8,10)] p-1.5 transition-colors duration-300 hover:border-white/15">
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-surface-raised">
               <iframe
-                src="https://www.loom.com/embed/b840c6796aff421482008263213c5741"
+                src="https://www.loom.com/embed/b840c6796aff421482008263213c5741?autoplay=1"
                 frameBorder="0"
                 allowFullScreen
                 className="absolute top-0 left-0 h-full w-full"
