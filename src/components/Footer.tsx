@@ -7,11 +7,11 @@ export default function Footer() {
   return (
     <footer className="border-t border-border-subtle">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-5">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-6">
           <div className="md:col-span-2">
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              {profile.tagline}
+              Marketing agents and business automation for you.
             </p>
           </div>
           <div>
