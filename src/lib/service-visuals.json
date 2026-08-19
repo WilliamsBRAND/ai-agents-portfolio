@@ -1,8 +1,8 @@
 {
-  "custom": "/service-visuals/custom.jpg",
-  "marketing": "/service-visuals/marketing.jpg",
-  "ops": "/service-visuals/ops.jpg",
-  "sales": "/service-visuals/sales.jpg",
-  "support": "/service-visuals/support.jpg",
-  "voice": "/service-visuals/voice.jpg"
+  "custom": "/service-visuals/custom.svg",
+  "marketing": "/service-visuals/marketing.svg",
+  "ops": "/service-visuals/ops.svg",
+  "sales": "/service-visuals/sales.svg",
+  "support": "/service-visuals/support.svg",
+  "voice": "/service-visuals/voice.svg"
 }

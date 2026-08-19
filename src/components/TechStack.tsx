@@ -13,6 +13,10 @@ const stack = [
   { name: "Vercel", file: "vercel.svg" },
   { name: "Next.js", file: "nextdotjs.svg" },
   { name: "OpenAI", file: "openai.svg" },
+  { name: "Clay", file: null },
+  { name: "Apollo", file: null },
+  { name: "Hunter", file: null },
+  { name: "HubSpot", file: null },
 ];
 
 function Tool({ name, file }: { name: string; file: string | null }) {
